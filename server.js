@@ -30,11 +30,9 @@ app.get("/api/:date", function (req, res) {
   let date = new Date(req.params.date)
   if (!String(date) || !Number.isInteger(date)){
     res.json({ error: "Invalid Date"})
-  } else if (date.toString()){
+  } else {
     res.json({unix: date.getTime(), utc: date.toUTCString() }); 
-  } else if (Number.isInteger(date)){
-    res.json()
-  }
+  } 
 });
 
 
