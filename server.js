@@ -3,6 +3,7 @@
 
 // init project
 var express = require('express');
+let moment = require('moment')
 var app = express();
 
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
@@ -20,8 +21,10 @@ app.get("/", function (req, res) {
 
 
 // your first API endpoint... 
-app.get("/api/hello", function (req, res) {
-  res.json({greeting: 'hello API'});
+app.get("/api/:date", function (req, res) {
+  req.params.date = new Date().toString()
+  res.json({unix: req.params.date });
+  
 });
 
 
