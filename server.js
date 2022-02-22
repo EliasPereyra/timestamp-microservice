@@ -27,7 +27,7 @@ app.get("/api", function(req,res){
 
 
 app.get("/api/:date", function (req, res) {
-  req.params.date = new Date().toString()
+  req.params.date = new Date()
   res.json({unix: moment.unix(req.params.date), utc: moment.utc(req.params.date) });
   
 });
