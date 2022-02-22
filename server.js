@@ -26,7 +26,7 @@ app.get("/api", function(req,res){
 })
 
 app.get("/api/:date", function (req, res) {
-  let date = new Date('2015-02-02')
+  let date = new Date(req.params.date)
   res.json({unix: date.getTime(), utc: date.toUTCString() });  
 });
 
