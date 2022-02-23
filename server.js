@@ -23,15 +23,15 @@ app.get("/", function (req, res) {
 // your first API endpoint... 
 app.get("/api", function(req,res){
   let date = new Date()
-  res.json({ unix: date.getTime(), utc: date.toUTCString()})
+  res.json({ unix: date.getTime(), utc: date.toUTCString() })
 })
 
 app.get("/api/:date", function (req, res) {
-  if (typeof req.params.date === "string"){
+  if (typeof req.params.date === "string" || typeof req.params.date === "number"){
     let date = new Date(req.params.date)
-    res.json({unix: date.getTime(), utc: date.toUTCString() }); 
+    res.json({ unix: date.getTime(), utc: date.toUTCString() }); 
   } else {
-    res.json({ error: "Invalid Date"})
+    res.json({ error: "Invalid Date" })
   } 
 });
 
