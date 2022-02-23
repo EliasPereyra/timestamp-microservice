@@ -27,7 +27,7 @@ app.get("/api", function(req,res){
 })
 
 app.get("/api/:date", function (req, res) {
-  if (req.params.date.valueOf() === "string" || Number.isInteger(req.params.date)){
+  if (typeof req.params.date === "string" || Number.isInteger(req.params.date)){
     let date = new Date(req.params.date)
     res.json({unix: date.getTime(), utc: date.toUTCString() }); 
   } else {
