@@ -22,10 +22,14 @@ app.get("/", function (req, res) {
 app.get("/api/:date", function (req, res) {
   let date = req.params.date;
   let newDate = Number(date) ? new Date(Number(date)) : new Date(date);
-  if (!Date(newDate)) {
-    res.json({ error: "Invalid date" });
+  if (newDate.toUTCString() !== "Invalid Date") {
+    console.log(newDate);
+    res
+      .status(200)
+      .json({ unix: newDate.getTime(), utc: newDate.toUTCString() });
+  } else {
+    res.status(400).json({ error: "Invalid Date" });
   }
-  res.json({ unix: newDate.getTime(), utc: newDate.toUTCString() });
 });
 
 // listen for requests :)
