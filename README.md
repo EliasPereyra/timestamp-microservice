@@ -10,8 +10,8 @@ from freeCodeCamp's Backend course
 * ![Node.js][Node.js]
 * ![MongoDB][MongoDB]
 
-[Node.js]: https://img.shields.io/badge/nodedotjs-#339933?style=for-the-badge&logo=nodedotjs&logoColor=white
-[MongoDB]: https://img.shields.io/badge/mongodb-#47A248?style=for-the-badge&log=mongodb&logoColor=white
+[Node.js]: https://img.shields.io/badge/nodedotjs-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
+[MongoDB]: https://img.shields.io/badge/mongodb-47A248?style=for-the-badge&log=mongodb&logoColor=white
 
 ## Contact
 
