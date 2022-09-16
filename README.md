@@ -15,6 +15,6 @@ from freeCodeCamp's Backend course
 
 ## Contact
 
-Elias Pereyra - [@EliasPereyraGo1](https://twitter.com/EliasPereyraGo1)
+Email - [eliaspereyra_gomez@hotmail.com](mailto:eliaspereyra_gomez@hotmail.com)
 
 Project Link: [https://github.com/EliasPereyra/timestamp-microservice](https://github.com/EliasPereyra/timestamp-microservice)
